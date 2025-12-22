@@ -1,0 +1,98 @@
+.benefits {
+  padding: 80px 20px;
+  background-color: #fffefb;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grid div {
+  background: #fff;
+  padding: 28px 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.grid div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  background-color: #fff8f0;
+}
+
+.icon {
+  font-size: 1.9rem;
+  color: #f68b1e;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.grid div:hover .icon {
+  color: #d46c10;
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.grid strong {
+  color: #333;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.grid p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.testimonial {
+  margin-top: 50px;
+  font-style: italic;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits h2 {
+    font-size: 1.7rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+}

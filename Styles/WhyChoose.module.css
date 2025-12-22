@@ -1,0 +1,119 @@
+.whychoose {
+  padding: 90px 20px;
+  background: linear-gradient(to bottom, #fffaf4, #ffffff);
+  text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.whychoose h2 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.intro {
+  max-width: 780px;
+  margin: 0 auto 50px;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.features div {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.features div svg {
+  font-size: 2.2rem;
+  color: #f68b1e;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.features div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff5ea;
+}
+
+.features div:hover svg {
+  color: #d97706;
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.features strong {
+  font-size: 1.05rem;
+  color: #222;
+}
+
+.quality {
+  margin-top: 60px;
+  background: #fff5ea;
+  border-left: 5px solid #f68b1e;
+  max-width: 800px;
+  margin-inline: auto;
+  padding: 22px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.quality p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .whychoose h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .quality {
+    margin-top: 45px;
+  }
+}
