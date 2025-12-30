@@ -9,7 +9,7 @@ export const testimonialsData = [
       quote:
         "Beautiful modular furniture with great quality and smooth process.",
       name: "Ravi Sharma",
-      location: "Indore",
+      location: "Dewas",
     },
     {
       quote:
