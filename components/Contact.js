@@ -8,7 +8,7 @@ export default function ContactPage() {
         <strong>Address:</strong> Shop 2, Gayathri Paradise, Opp. Gayathri Mandir, Kanadia, Indore – 452016
       </p>
       <p>
-        <strong>Phone:</strong> <a href="tel:8446004545">8446004545</a>
+        <strong>Phone:</strong> <a href="tel:8319266986">8319266986</a>
       </p>
       <p>
         <strong>Email:</strong> shilpkaarfurnitures@gmail.com

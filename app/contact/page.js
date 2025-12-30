@@ -84,7 +84,7 @@ export default function ContactPage() {
                     </form>
 
                     <div className={styles.contactInfo}>
-                        <p><strong>Phone:</strong> +91 8446004545</p>
+                        <p><strong>Phone:</strong> +91 8319266986</p>
                         <p><strong>Email:</strong> shilpkaarfurnitures@gmail.com</p>
                         <p><strong>Address:</strong> Shop 2, Gayathri Paradise, Opp. Gayathri Mandir, Kanadia, Indore – 452016</p>
                     </div>

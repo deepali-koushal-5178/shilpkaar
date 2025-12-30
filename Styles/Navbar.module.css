@@ -56,6 +56,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   position: relative;
+  left: 5%;
 }
 
 /* .navLinks a.active {
@@ -233,6 +234,12 @@
   gap: 6px;
   animation: fadeIn 0.3s ease-in-out;
 }
+.ctaContainer {
+  margin-left: auto;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
 
 @keyframes fadeIn {
   from {
@@ -293,3 +300,9 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .ctaContainer {
+    display: none !important;
+  }
+}
+

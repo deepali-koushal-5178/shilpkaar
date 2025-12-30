@@ -8,18 +8,20 @@ import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
+import FeaturesSection from "@/components/FeaturesSection";
 // import Contact from "../components/Contact";
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
-      <Features />
-      <Benefits />
-      <WhyChoose/>
-      <Process />
+      <FeaturesSection/>
       <Products />
       <Projects/>
+      <Features />
+      {/* <Benefits /> */}
+      <WhyChoose/>
+      <Process />
       <Testimonials/>
       <FAQ/>
       <CTA />

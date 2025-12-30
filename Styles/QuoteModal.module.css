@@ -1,0 +1,83 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* Center nahi — top se start */
+  padding-top: 80px;         /* Yaha se kitna niche chahiye adjust kar sakti ho */
+  z-index: 99999;
+}
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 380px;
+  position: relative;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modalTitle {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.inputField   {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.textArea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 8px;
+  resize: none;
+  min-height: 80px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.textArea:focus {
+  border-color: #f68b1e;
+  box-shadow: 0 0 8px rgba(246, 139, 30, 0.4);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  background: #f68b1e;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 20px;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}

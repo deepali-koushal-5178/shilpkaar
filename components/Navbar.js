@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { FaBars, FaTimes, FaUserCircle, FaEnvelope, FaLock, FaCheckCircle } from "react-icons/fa";
 import styles from "../Styles/Navbar.module.css";
 import Link from "next/link";
+import CTAButton from "./CTAButton";
 
 
 export default function Navbar() {
@@ -14,6 +15,12 @@ export default function Navbar() {
   const [formData, setFormData] = useState({ email: "", password: "", confirm: "" })
   const [successMsg, setSuccessMsg] = useState("")
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false);
+
+useEffect(() => {
+  setMounted(true);
+}, []);
+
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -57,7 +64,7 @@ export default function Navbar() {
           ${pathname !== "/" ? styles.notHome : ""}`}
       >
         <div className={styles.logo}>
-          Furnkaar 
+          Furnkaar
           <span className={styles.tagline}>
             The Signature Collection by Shilpkaar Furnitures
           </span>
@@ -68,105 +75,18 @@ export default function Navbar() {
         </div>
 
         <div className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-          <Link  href="/" className={pathname === "/" ? styles.active : ""}>Home</Link >
-          <Link  href="/about" className={pathname === "/about" ? styles.active : ""}>About</Link >
-          <Link  href="/machines" className={pathname === "/machines" ? styles.active : ""}>Our Machines</Link >
-          <Link  href="/catalog" className={pathname === "/catalog" ? styles.active : ""}>Product Catalog</Link >
-          <Link  href="/faq" className={pathname === "/faq" ? styles.active : ""}>FAQ</Link >
-          <Link  href="/contact" className={pathname === "/contact" ? styles.active : ""}>Contact</Link >
+          <Link href="/" className={mounted && pathname === "/" ? styles.active : ""}>Home</Link >
+          <Link href="/about" className={mounted && pathname === "/about" ? styles.active : ""}>About</Link >
+          <Link href="/machines" className={mounted && pathname === "/machines" ? styles.active : ""}>Our Machines</Link >
+          <Link href="/catalog" className={mounted && pathname === "/catalog" ? styles.active : ""}>Product Catalog</Link >
+          <Link href="/faq" className={mounted && pathname === "/faq" ? styles.active : ""}>FAQ</Link >
+          <Link href="/contact" className={mounted && pathname === "/contact" ? styles.active : ""}>Contact</Link >
+        </div>
+        <div className={styles.ctaContainer}>
+<CTAButton desktop={true} />
         </div>
 
-        {/* <div className={styles.actions}>
-          <button
-            className={styles.loginIcon}
-            onClick={() => {
-              setShowLogin(true);
-              setIsSignup(false);
-              setFormData({ email: "", password: "", confirm: "" });
-              setSuccessMsg("");
-            }}
-            aria-label="Login"
-          >
-            <FaUserCircle />
-          </button>
-        </div> */}
       </nav>
-
-      {/* {showLogin && (
-        <div className={styles.loginOverlay} onClick={() => setShowLogin(false)}>
-          <div className={styles.loginModal} onClick={(e) => e.stopPropagation()}>
-            <h2>{isSignup ? "Create Account" : "Welcome Back"}</h2>
-
-            <form onSubmit={handleSubmit}>
-              <div className={styles.inputGroup}>
-                <FaEnvelope className={styles.inputIcon} />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className={styles.inputGroup}>
-                <FaLock className={styles.inputIcon} />
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              {isSignup && (
-                <div className={styles.inputGroup}>
-                  <FaLock className={styles.inputIcon} />
-                  <input
-                    type="password"
-                    name="confirm"
-                    placeholder="Confirm Password"
-                    value={formData.confirm}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              )}
-
-              <button type="submit" className={styles.loginBtn}>
-                {isSignup ? "Sign Up" : "Login"}
-              </button>
-            </form>
-
-            {successMsg && (
-              <div className={styles.successMsg}>
-                <FaCheckCircle /> {successMsg}
-              </div>
-            )}
-
-            <p>
-              {isSignup ? (
-                <>
-                  Already have an account?{" "}
-                  <a href="#" onClick={toggleAuthMode}>Login</a>
-                </>
-              ) : (
-                <>
-                  Don’t have an account?{" "}
-                  <a href="#" onClick={toggleAuthMode}>Sign Up</a>
-                </>
-              )}
-            </p>
-
-            <button className={styles.closeBtn} onClick={() => setShowLogin(false)}>
-              ✖
-            </button>
-          </div>
-        </div>
-      )} */}
     </>
   );
 }

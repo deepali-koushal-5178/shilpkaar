@@ -17,13 +17,13 @@ export default function Process() {
         {steps.map((step) => (
           <div key={step.id}>
             <div className={styles.imgBox}>
-              <Image
-                src={step.img}
-                alt={step.alt}
-                width={400}
-                height={250}
-                className={styles.stepImage}
-              />
+             <Image
+  src={step.img}
+  alt={step.alt}
+  fill
+  className={styles.stepImage}
+  sizes="(max-width: 768px) 100vw, 33vw"
+/>
             </div>
             <h3>{step.id}. {step.title}</h3>
             <p>{step.desc}</p>
