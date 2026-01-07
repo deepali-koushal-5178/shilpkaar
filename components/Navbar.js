@@ -81,6 +81,7 @@ useEffect(() => {
           <Link href="/catalog" className={mounted && pathname === "/catalog" ? styles.active : ""}>Product Catalog</Link >
           <Link href="/faq" className={mounted && pathname === "/faq" ? styles.active : ""}>FAQ</Link >
           <Link href="/contact" className={mounted && pathname === "/contact" ? styles.active : ""}>Contact</Link >
+          <Link href="/blog" className={mounted && pathname === "/blog" ? styles.active : ""}>Blog</Link >
         </div>
         <div className={styles.ctaContainer}>
 <CTAButton desktop={true} />
