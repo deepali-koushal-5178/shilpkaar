@@ -22,7 +22,7 @@ export default function Hero() {
             We design and manufacture modular furniture for homes, offices, and commercial spaces — built with precision, durability, and elegant finish.
           </p>
           <a
-            href="https://wa.me/918446004545?text=Hi%20Team%20Shilpkaar!%20I%20would%20like%20to%20discuss%20a%20custom%20furniture%20project."
+            href="https://wa.me/918319266986?text=Hi%20Team%20Shilpkaar!%20I%20would%20like%20to%20discuss%20a%20custom%20furniture%20project."
             target="_blank"
             rel="noopener noreferrer"
             className={styles.button}
