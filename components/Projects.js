@@ -7,10 +7,10 @@ import styles from "../Styles/Projects.module.css";
 
 export default function Projects() {
   const projects = [
-    { img: "/images/Kitchens/kitchen16.jpg", title: "Modular Kitchen – Indore" },
-    { img: "/images/Sliding-Wardrobe/wb22.jpg", title: "Wardrobe Design – Bhopal" },
-    { img: "/images/tv4.jpg", title: "TV Unit – Pune" },
-    { img: "/images/Double-Bed/db30.jpg", title: "Bedroom Set – Ujjain" },
+    { img: "/images/Kitchens/kitchen16.jpg", title: "Modular Kitchen – The Empress, Indore" },
+    { img: "/images/Sliding-Wardrobe/wb22.jpg", title: "Wardrobe Design – Elite Apex, Indore" },
+    { img: "/images/tv4.jpg", title: "Living room interior – Kanak Smart City, Indore" },
+    { img: "/images/Double-Bed/db30.jpg", title: "Bedroom Set – Indore" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(null);

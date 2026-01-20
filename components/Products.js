@@ -31,6 +31,17 @@ export default function Products() {
     "Console",
     "Crockery-unit",
     "Below-stairs",
+       "Tv-unit",
+    "Doors",
+    "Door-panelling",
+    "Partitions",
+    "Dining",
+    "Breakfast-counter",
+    "Wash-unit",
+    "Mouldings",
+    "Center-table",
+    "Sofa",
+    "Couch",
   ];
 
   const [selectedCategory, setSelectedCategory] = useState(null);

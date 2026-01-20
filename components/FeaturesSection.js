@@ -7,7 +7,7 @@ import { FiPenTool, FiAward, FiTag, FiTool } from "react-icons/fi";
 export default function FeaturesSection() {
   const features = [
     { icon: <FiPenTool />, title: "Custom Designs" },
-    { icon: <FiAward />, title: "10-Year Warranty" },
+    { icon: <FiAward />, title: "Written Warranty" },
     { icon:  <FaRegHandshake />, title: "Fair Pricing" },
     { icon: <FiTool />, title: "Factory Finish" },
   ];

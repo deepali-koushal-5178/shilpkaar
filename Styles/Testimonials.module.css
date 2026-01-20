@@ -60,3 +60,101 @@
     padding: 24px 18px;
   }
 }
+/* Featured big card */
+.featuredCard {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  background: #fff8f2;
+  padding: 32px 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.featuredCard blockquote p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.featuredCard cite {
+  color: #f68b1e;
+  font-weight: 600;
+}
+
+/* Small swipe cards */
+.smallCard {
+  background: #fffefc;
+  padding: 22px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.smallCard blockquote p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.smallCard cite {
+  color: #f68b1e;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Slider spacing */
+.slider {
+  max-width: 1100px;
+  margin: 0 auto;
+    padding-bottom: 35px;
+}
+
+/* Responsive featured card */
+@media (max-width: 600px) {
+  .featuredCard {
+    padding: 24px 18px;
+  }
+}
+.swipeHint {
+  /* margin-top: 5px; */
+  font-size: 0.85rem;
+  color: #888;
+  display: none;
+}
+
+
+.swiper-pagination-bullet {
+  background: #f68b1e;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.swipeHint {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #888;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .swipeHint {
+    display: block;
+  }
+}
+.slider .swiper-pagination {
+  margin-top: 24px;
+  position: static;
+}
+.slider .swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  top: auto !important;
+  margin-top: 20px !important;
+}

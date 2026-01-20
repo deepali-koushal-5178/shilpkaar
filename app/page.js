@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import FeaturesSection from "@/components/FeaturesSection";
+import RecentlyCompletedProjects from "@/components/RecentlyCompleteProject";
 // import Contact from "../components/Contact";
 
 export default function HomePage() {
@@ -16,13 +17,15 @@ export default function HomePage() {
     <main>
       <Hero />
       <FeaturesSection/>
+      <RecentlyCompletedProjects/>
       <Products />
+      <Testimonials/>
       <Projects/>
       <Features />
       {/* <Benefits /> */}
       <WhyChoose/>
       <Process />
-      <Testimonials/>
+  
       <FAQ/>
       <CTA />
       {/* <Contact /> */}

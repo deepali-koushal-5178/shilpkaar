@@ -79,6 +79,22 @@
   line-height: 1.6;
   font-size: 0.95rem;
 }
+.seeMoreBtn {
+  margin-top: 20px;
+  background: #f68b1e;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.seeMoreBtn:hover {
+  background: #d97706;
+}
 
 @media (max-width: 768px) {
   .faq {

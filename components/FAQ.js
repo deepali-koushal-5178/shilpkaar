@@ -3,11 +3,19 @@ import { useState } from "react";
 import styles from "../Styles/FAQ.module.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { faqdata } from "@/data/faq";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const faqs = faqdata;
+  const maxToShow = 5;
+
+  const isFaqPage = pathname === "/faq";
+
+  const visibleFaqs = isFaqPage ? faqs : faqs.slice(0, maxToShow);
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -28,7 +36,7 @@ export default function FAQ() {
       <h2 id="faq-heading">Frequently Asked Questions</h2>
 
       <div className={styles.list}>
-        {faqs.map((f, i) => (
+        {visibleFaqs.map((f, i) => (
           <div
             key={i}
             className={`${styles.item} ${openIndex === i ? styles.active : ""}`}
@@ -56,6 +64,16 @@ export default function FAQ() {
           </div>
         ))}
       </div>
+
+      {/* 👉 Only show button when NOT on full FAQ page */}
+      {!isFaqPage && faqs.length > maxToShow && (
+        <button
+          className={styles.seeMoreBtn}
+          onClick={() => router.push("/faq")}
+        >
+          See More FAQs →
+        </button>
+      )}
 
       <script
         type="application/ld+json"

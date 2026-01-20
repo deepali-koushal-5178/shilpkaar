@@ -1,5 +1,6 @@
 import styles from "../Styles/Contact.module.css"
 
+
 export default function ContactPage() {
   return (
     <footer id="contact" className={styles.contact}>
@@ -14,7 +15,15 @@ export default function ContactPage() {
         <strong>Email:</strong> shilpkaarfurnitures@gmail.com
       </p>
       <p>
-        {/* <strong>Follow us:</strong> @shilpkaar_furnitures */}
+        <strong>Follow us:</strong>{" "}
+        <a
+          href="https://www.instagram.com/shilpkaarluxe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.instaLink}
+        >
+          @shilpkaarluxe
+        </a>
       </p>
       <p className={styles.copy}>© {new Date().getFullYear()} Furnkaar – The Signature Collection by Shilpkaar Furnitures</p>
     </footer>

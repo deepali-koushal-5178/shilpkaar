@@ -35,6 +35,17 @@ function CatalogContent() {
     "Console",
     "Crockery-unit",
     "Below-stairs",
+    "Tv-unit",
+    "Doors",
+    "Door-panelling",
+    "Partitions",
+    "Dining",
+    "Breakfast-counter",
+    "Wash-unit",
+    "Mouldings",
+    "Center-table",
+    "Sofa",
+    "Couch",
   ];
   const [category, setCategory] = useState(initialCategory);
   const [filtered, setFiltered] = useState(items);
