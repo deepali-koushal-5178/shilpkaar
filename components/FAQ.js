@@ -65,7 +65,6 @@ export default function FAQ() {
         ))}
       </div>
 
-      {/* 👉 Only show button when NOT on full FAQ page */}
       {!isFaqPage && faqs.length > maxToShow && (
         <button
           className={styles.seeMoreBtn}
